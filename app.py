@@ -16,7 +16,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-image = Image.open('adidas-logo.jpg')
+image = Image.open('./Images/adidas-logo.jpg')
 
 col1, col2 = st.columns([0.1, 0.9])
 
@@ -28,7 +28,7 @@ title = "<center><h1>Adidas Interactive Sales Dashboard</h1></center>"
 with col2:
     st.markdown(title, unsafe_allow_html=True)
 
-data = pd.read_excel("ventes_smartphones.xlsx")
+data = pd.read_excel("./Data/ventes_smartphones.xlsx")
 
 data.columns = data.columns.str.strip()
 data = data[data['TotalSales'] != "------------"]
